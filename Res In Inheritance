@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Console_res_by_Inyheritance
+{
+    class a
+    {
+        public int m1, m2, m3, tot, pr;
+        public string r, g;
+
+    }
+    class b : a
+    {
+        public void gm()
+        {
+            Console.WriteLine("Enter m1 :");
+            m1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter m2 :");
+            m2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter m3 :");
+            m3 = Convert.ToInt32(Console.ReadLine());
+
+        }
+    }
+    class c : b
+    {
+        public void res()
+        {
+            tot = m1+m2+m3 ;
+            Console.WriteLine("tot :"+tot);
+            pr = tot / 3;
+            Console.WriteLine("Pr is :" + pr);
+            if (m1 >= 40 && m2 >= 40 && m3 >= 40)
+            {
+                 r= "Pass";
+                Console.WriteLine("res is :"+r);
+              
+                if (pr >= 70)
+                {
+                    g = "a";
+                    Console.WriteLine("grade is :"+g);
+                   
+                }
+                else if (pr > 50)
+                {
+                    g = "b";
+                    Console.WriteLine("grade is :" + g);
+                }
+                else if(pr >40)
+                {
+                    g = "c";
+                    Console.WriteLine("grade is :" + g);
+                }
+            }
+            else
+            {
+                r = "fail";
+                Console.WriteLine("res is :" + r);
+                g = "Fail";
+                Console.WriteLine("grade is :" + g);
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            c c = new c();
+            c.gm();
+            c.res();
+            Console.Read();
+        }
+    }
+}
+
+     
