@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class ADD
+    {
+
+        int x, y;
+        int f;
+
+
+        // 1st constructor
+        public ADD(int a, int b)
+        {
+            x = a;
+            y = b;
+            Console.WriteLine(x + y);
+        }
+        public ADD(int a)
+        {
+            f = a;
+            y = 10;
+            Console.WriteLine(f*y);
+        }
+ 
+    }       
+            
+          
+      
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ADD a = new ADD(10, 20);
+           
+            ADD a1 = new ADD(10);
+           
+            Console.Read();
+        }
+    }
+}
